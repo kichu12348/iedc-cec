@@ -94,7 +94,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 height: 50px;
-background-color: transparent;
+background-color: rgba(255, 255, 255, 0.5);
 backdrop-filter: blur(10px);
 box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
 z-index: 1000;
