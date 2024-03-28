@@ -53,7 +53,17 @@ function HamburgerMenu({showHamburger}){
 
   return (
     <HeaderContainer>
-      <HamburgerMenu showHamburger={showHamburger} />
+      <div style={{
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: '95%',
+        padding: '10px 10px',
+        backgroundColor: 'transparent',
+        zIndex: '1000',
+      }}>
+        <HamburgerMenu showHamburger={showHamburger} />
       <div className="logo animate__animated animate__fadeInLeft" onClick={scrollToHome}>
         <img src={logo} alt="logo" className='imgLOGO' />
         <img src={iedcLogo} alt="iedcLogo" className='imgIedcLogo' />
@@ -66,6 +76,8 @@ function HamburgerMenu({showHamburger}){
         <a className='Joinbtn'>Join Us</a>
         <img src={hamburger} alt="hamburger" className="hamburgerBtn" onClick={handleHamburger} />
       </div>
+      </div>
+      
     </HeaderContainer>
   )
 }
@@ -79,7 +91,8 @@ top: 0;
 padding: 10px 10px;
 width:100svw;
 display: flex;
-justify-content: space-between;
+flex-direction: row;
+justify-content: center;
 align-items: center;
 height: 50px;
 background-color: transparent;
