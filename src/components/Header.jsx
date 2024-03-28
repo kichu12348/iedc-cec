@@ -91,7 +91,6 @@ top: 0;
 padding: 10px 10px;
 width:100svw;
 display: flex;
-flex-direction: row;
 justify-content: center;
 align-items: center;
 height: 50px;
@@ -107,6 +106,7 @@ z-index: 1000;
   align-items: center;
   width: 10%;
   z-index: 20;
+  margin-left: 15px;
 
   .imgLOGO{
     width: 40px;
@@ -122,6 +122,7 @@ z-index: 1000;
 
 .links {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   width: 50%;
@@ -161,6 +162,8 @@ z-index: 1000;
   .links{
 
     width:15%;
+    justify-content:flex-end;
+
     .link{
       display: none;
     }
