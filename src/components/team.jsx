@@ -5,7 +5,7 @@ import memeCat from "./images/memeCat.png";
 import CarouselSlider from "./partials/slider";
 
 const Team=React.forwardRef((props,ref)=>{
-  const [slidesToShow, setSlidesToShow] = useState(5);
+  const [slidesToShow, setSlidesToShow] = useState(4);
   const[faculty,setFaculty]=useState(3)
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const Team=React.forwardRef((props,ref)=>{
       setSlidesToShow(2);
       setFaculty(3)
     } else {
-      setSlidesToShow(5);
+      setSlidesToShow(4);
       setFaculty(3)
     }
   });
@@ -73,71 +73,6 @@ const Team=React.forwardRef((props,ref)=>{
     <CarouselSliderComponent>
     <img src={memeCat} alt="memeCat" />
     <h1>hmmmm</h1>
-    <p>Secretary</p>
-  </CarouselSliderComponent>,
-  <CarouselSliderComponent>
-    <img src={memeCat} alt="memeCat" />
-    <h1>me</h1>
-    <p>Secretary</p>
-  </CarouselSliderComponent>,
-  <CarouselSliderComponent>
-  <img src={memeCat} alt="memeCat" />
-  <h1>hmmmm</h1>
-  <p>Secretary</p>
-</CarouselSliderComponent>,
-<CarouselSliderComponent>
-  <img src={memeCat} alt="memeCat" />
-  <h1>me</h1>
-  <p>Secretary</p>
-</CarouselSliderComponent>,
-<CarouselSliderComponent>
-      <img src={memeCat} alt="memeCat" />
-      <h1>hmmmm</h1>
-      <p>Secretary</p>
-    </CarouselSliderComponent>,
-    <CarouselSliderComponent>
-      <img src={memeCat} alt="memeCat" />
-      <h1>me</h1>
-      <p>Secretary</p>
-    </CarouselSliderComponent>,
-    <CarouselSliderComponent>
-    <img src={memeCat} alt="memeCat" />
-    <h1>hmmmm</h1>
-    <p>Secretary</p>
-  </CarouselSliderComponent>,
-  <CarouselSliderComponent>
-    <img src={memeCat} alt="memeCat" />
-    <h1>me</h1>
-    <p>Secretary</p>
-  </CarouselSliderComponent>,
-  <CarouselSliderComponent>
-  <img src={memeCat} alt="memeCat" />
-  <h1>hmmmm</h1>
-  <p>Secretary</p>
-</CarouselSliderComponent>,
-<CarouselSliderComponent>
-  <img src={memeCat} alt="memeCat" />
-  <h1>me</h1>
-  <p>Secretary</p>
-</CarouselSliderComponent>,
-<CarouselSliderComponent>
-      <img src={memeCat} alt="memeCat" />
-      <h1>hmmmm</h1>
-      <p>Secretary</p>
-    </CarouselSliderComponent>,
-    <CarouselSliderComponent>
-      <img src={memeCat} alt="memeCat" />
-      <h1>me</h1>
-      <p>Secretary</p>
-    </CarouselSliderComponent>,
-    <CarouselSliderComponent>
-    <img src={memeCat} alt="memeCat" />
-    <h1>hmmmm</h1>
-    <p>Secretary</p>
-  </CarouselSliderComponent>,
-  <CarouselSliderComponent>
-    <img src={memeCat} alt="memeCat" />
-    <h1>me</h1>
     <p>Secretary</p>
   </CarouselSliderComponent>,
   ];

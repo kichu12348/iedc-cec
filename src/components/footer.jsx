@@ -14,6 +14,12 @@ function Footer({
     scrollToTeam,
     scrollToTestimonials,
 }) {
+
+const handleRedirect = (url) => {
+    window.open(url)
+}
+
+
   return (
     <FooterContainer>
       <div className="top">
@@ -32,8 +38,8 @@ function Footer({
                 alignItems: 'center',
                 flexDirection: 'row'
             }}>
-            <img src={instagram}/>
-            <img src={github}/>
+            <img src={instagram} onClick={()=>handleRedirect('https://www.instagram.com/arcade_.1?igsh=cGFoaGljYzkyaTg%3D&utm_source=qr')}/>
+            <img src={github} onClick={()=>handleRedirect('https://github.com/kichu12348')}/>
             </div>
             <div className="links">
                 <a onClick={scrollToInspi}>Our Vision</a>
@@ -132,6 +138,7 @@ const FooterContainer = styled.div`
             width: 50px;
             height: 50px;
             margin: 10px;
+            cursor: pointer;
         }
 
         .links{

@@ -7,3 +7,7 @@
   font-family: josefin sans, sans-serif,Arial, Helvetica;
   box-sizing: border-box;
 }
+
+body{
+  overflow-x: hidden;
+}

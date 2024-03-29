@@ -148,7 +148,7 @@ const TestimonialsContainer = styled.div`
 
           h3 {
             font-size: 1.2rem;
-            font-weight: 400;
+            font-weight: 700;
             color: #000000;
           }
           p {
@@ -168,6 +168,7 @@ const TestimonialsContainer = styled.div`
 
   @media screen and (max-width: 768px) {
     .bottom {
+      justify-content: center;
         gap: 20px;
       .right,.left{
         width: 90%;

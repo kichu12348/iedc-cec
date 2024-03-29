@@ -87,7 +87,7 @@ const RenderComponentSphere = styled.div`
   right: 0;
   z-index: -1;
   height: 100vh;
-  width: 90%;
+  width: 100%;
   overflow: hidden;
   rotate: 20deg;
 
