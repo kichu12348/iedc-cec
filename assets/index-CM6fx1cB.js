@@ -4132,6 +4132,7 @@ background-color: #ffffff;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  background-color: transparent;
 `,RC=mt.div`
   position: absolute;
   top: 0;
@@ -4142,6 +4143,7 @@ background-color: #ffffff;
   justify-content: center;
   align-items: center;
   transition: left 0.5s ease;
+  background-color: transparent;
 `,Zm=mt.button`
   display: ${({arrow:t})=>t==="true"?"block":"none"};
   position: absolute;
@@ -4283,7 +4285,7 @@ background-color: #ffffff;
 
 @media screen and (max-width: 768px) {
     .card{
-        width: 100%;
+        width: 95%;
         height: 80%;
         flex-direction: column;
         gap: 10px;
