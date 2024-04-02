@@ -221,7 +221,7 @@ const CarouselSliderCompnent = styled.div`
 
 @media screen and (max-width: 768px) {
     .card{
-        width: 100%;
+        width: 95%;
         height: 80%;
         flex-direction: column;
         gap: 10px;

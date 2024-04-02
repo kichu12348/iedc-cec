@@ -6,6 +6,7 @@ const CarouselContainer = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
+  background-color: transparent;
 `;
 
 const CarouselSlide = styled.div`
@@ -18,6 +19,7 @@ const CarouselSlide = styled.div`
   justify-content: center;
   align-items: center;
   transition: left 0.5s ease;
+  background-color: transparent;
 `;
 
 const CarouselButton = styled.button`
