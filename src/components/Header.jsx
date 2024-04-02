@@ -132,6 +132,8 @@ const HeaderContainer = styled.nav`
     align-items: center;
     width: 50%;
     padding: 0 10px;
+    transition: all 0.5s ease;
+    
     .link {
       color: #000000;
       text-decoration: none;
@@ -151,6 +153,8 @@ const HeaderContainer = styled.nav`
       border-radius: 10px;
       cursor: pointer;
       text-decoration: none;
+      height: 40px;
+      width: 95px;
     }
 
     .hamburgerBtn {

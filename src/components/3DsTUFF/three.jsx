@@ -1,23 +1,23 @@
-import React, { useEffect, useRef,useState } from "react";
+import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import styled from "styled-components";
 
-const ThreeDScene = ({width}) => {
+const ThreeDScene = ({ width }) => {
   const mountRef = useRef(null);
-
-
 
   useEffect(() => {
     let mouseX = 0;
     let mouseY = 0;
+
     // Set up the renderer
-    const renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setClearColor(0xffffff); // Set the background color to white
+    renderer.setClearColor(0xffffff); // background color white
+    renderer.setPixelRatio(window.devicePixelRatio); //for better quality
 
     // Set up the scene
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color("#ffffff"); // Set the background color to white
+    scene.background = new THREE.Color("#ffffff"); 
 
     // Set up the camera
     const camera = new THREE.PerspectiveCamera(
@@ -29,7 +29,7 @@ const ThreeDScene = ({width}) => {
     camera.position.z = 5;
 
     // Create a sphere with a mesh-like appearance
-    const sphereGeometry = new THREE.SphereGeometry(width, 15, 15);
+    const sphereGeometry = new THREE.SphereGeometry(width, 15, 15); // radius, widthSegments, heightSegments
     const sphereMaterial = new THREE.MeshLambertMaterial({
       color: 0xffffff,
       wireframe: true,
@@ -76,7 +76,7 @@ const ThreeDScene = ({width}) => {
     };
   }, [width]);
 
-  return <RenderComponentSphere ref={mountRef} className="animate__animated animate__fadeInRight"/>;
+  return <RenderComponentSphere ref={mountRef} className="animate__animated animate__fadeInRight" />;
 };
 
 export default ThreeDScene;
