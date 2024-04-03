@@ -29,7 +29,7 @@ const ThreeDScene = ({ width }) => {
     camera.position.z = 5;
 
     // Create a sphere with a mesh-like appearance
-    const sphereGeometry = new THREE.SphereGeometry(width, 15, 15); // radius, widthSegments, heightSegments
+    const sphereGeometry = new THREE.TetrahedronGeometry(width, 15, 15); // radius, widthSegments, heightSegments
     const sphereMaterial = new THREE.MeshLambertMaterial({
       color: 0xffffff,
       wireframe: true,
