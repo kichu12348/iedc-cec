@@ -4,15 +4,15 @@ import iedcLogoWhite from './images/iedcLogoWhite.svg'
 import logoWhite from './images/logoWhite.webp'
 import instagram from './images/instagram.svg'
 import github from './images/github.svg'
+import { useContext } from 'react'
+import AudioContext from '../contexts/audioContext'
 
 function Footer({
-    scrollToHome,
     scrollToInspi,
     scrollToAnoucements,
     scrollToAchivement,
     scrollToWhoWeAre,
     scrollToTeam,
-    scrollToTestimonials,
 }) {
 
 const handleRedirect = (url) => {
@@ -20,12 +20,15 @@ const handleRedirect = (url) => {
 }
 
 
+const playRick = useContext(AudioContext)
+
+
   return (
     <FooterContainer>
       <div className="top">
         <div className="logo">
-            <img src={logoWhite} alt="" />
-            <img src={iedcLogoWhite}/>
+            <img src={logoWhite} alt="" onClick={playRick}/>
+            <img src={iedcLogoWhite} onClick={playRick}/>
             <h3>Contact Us</h3>
             <p>hhh@gmail.com</p>
             <p>uhuh@gmail.com</p>

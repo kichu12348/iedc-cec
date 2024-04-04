@@ -1,14 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import ThreeDScene from "./3DsTUFF/three";
+import AudioContext from "../contexts/audioContext";
 
 const Body = React.forwardRef(({ width }, ref) => {
+
+  const playRick = React.useContext(AudioContext);
+
     return (
         <BodyContainer ref={ref}>
             <HomeContainer className="animate__animated animate__fadeInLeft">
                 <h1>IEDC CEC</h1>
                 <p>Innovation And Entrepreneurship Development Cell Bootcamp CEC</p>
-                <a>Join Our Community!</a>
+                <a onClick={playRick}>Join Our Community!</a>
             </HomeContainer>
 
             <ThreeDScene width={width} />

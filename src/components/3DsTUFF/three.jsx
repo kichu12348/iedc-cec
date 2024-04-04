@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef} from "react";
 import * as THREE from "three";
 import styled from "styled-components";
 
@@ -27,7 +27,7 @@ const ThreeDScene = ({ width }) => {
       1000
     );
     camera.position.z = 5;
-
+      
     // Create a sphere with a mesh-like appearance
     const sphereGeometry = new THREE.SphereGeometry(width, 15, 15); // radius, widthSegments, heightSegments
     const sphereMaterial = new THREE.MeshLambertMaterial({

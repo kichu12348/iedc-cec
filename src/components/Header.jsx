@@ -3,7 +3,8 @@ import styled from "styled-components";
 import iedcLogo from "./images/iedcLogo.svg";
 import logo from "./images/logo.webp";
 import hamburger from "./images/hamburger.svg";
-import { useState } from "react";
+import AudioContext from "../contexts/audioContext";
+import { useState,useContext} from "react";
 
 function Header({ scrollToHome, scrollToAnoucements, scrollToTestimonials }) {
   const [showHamburger, setShowHamburger] = useState(false);
@@ -21,6 +22,8 @@ function Header({ scrollToHome, scrollToAnoucements, scrollToTestimonials }) {
     }
   };
 
+  const playRick = useContext(AudioContext);
+
   function HamburgerMenu({ showHamburger }) {
     return (
       <HamburgerMenuContainer
@@ -34,11 +37,11 @@ function Header({ scrollToHome, scrollToAnoucements, scrollToTestimonials }) {
           <a className="linkH" onClick={scrollToAnoucements}>
             Events
           </a>
-          <a className="linkH">Execom</a>
+          <a className="linkH" onClick={playRick}>Execom</a>
           <a className="linkH" onClick={scrollToTestimonials}>
             Testimonials
           </a>
-          <a className="JoinbtnH">Join Us</a>
+          <a className="JoinbtnH" onClick={playRick}>Join Us</a>
         </div>
       </HamburgerMenuContainer>
     );
@@ -73,7 +76,7 @@ function Header({ scrollToHome, scrollToAnoucements, scrollToTestimonials }) {
           <a className="link" onClick={scrollToAnoucements}>
             Events
           </a>
-          <a className="link">Execom</a>
+          <a className="link" onClick={playRick}>Execom</a>
           <a className="link" onClick={scrollToTestimonials}>
             Testimonials
           </a>

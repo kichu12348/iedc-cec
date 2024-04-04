@@ -262,6 +262,10 @@ const WhoWeAreContainer = styled.div`
             height: 5px;
             background-color: #000000;
             border-radius: 10px;
+
+            @media screen and (max-width: 768px) {
+              width: 75%;
+            }
           }
         }
       }
