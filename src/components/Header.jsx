@@ -15,7 +15,7 @@ function Header({ scrollToHome, scrollToAnoucements, scrollToTestimonials }) {
   const handleHamburger = () => {
     if (showHamburger) {
       setAnimate("animate__animated animate__fadeOutLeft");
-      setTimeout(() => setShowHamburger(false), 1000);
+      setTimeout(() => setShowHamburger(false), 500);
     } else {
       setShowHamburger(true);
       setAnimate("animate__animated animate__fadeInLeft");
