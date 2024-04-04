@@ -62,7 +62,7 @@ const ThreeDScene = ({ width }) => {
 
       camera.lookAt(scene.position); // Look at the center of the scene
 
-      sphere.rotation.y += 0.01;
+      sphere.rotation.y += 0.002;
 
       renderer.render(scene, camera);
     };
