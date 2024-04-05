@@ -37,7 +37,7 @@ const ThreeDScene = ({ width }) => {
     });
     const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
     scene.add(sphere);
-    sphere.rotation.y=20
+    sphere.rotation.x=20
 
     // Add lighting
     const ambientLight = new THREE.AmbientLight(0x404040);
