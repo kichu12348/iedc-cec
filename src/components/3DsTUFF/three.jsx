@@ -31,7 +31,7 @@ const ThreeDScene = ({ width }) => {
 var angleInRadians = THREE.MathUtils.degToRad(20);
 
 // Set rotation of the camera
-camera.rotation.z = 20;
+camera.rotation.y= 20;
       
     // Create a sphere with a mesh-like appearance
     const sphereGeometry = new THREE.SphereGeometry(width, 15, 15); // radius, widthSegments, heightSegments
