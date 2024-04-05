@@ -41,6 +41,7 @@ camera.rotation.y= 20;
     });
     const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
     scene.add(sphere);
+    sphere.rotation.x=20
 
     // Add lighting
     const ambientLight = new THREE.AmbientLight(0x404040);
