@@ -11,7 +11,7 @@ import Testimonials from "./components/testimonials";
 import Footer from "./components/footer";
 import AudioContext from "./contexts/audioContext";
 import rolls from "./contexts/audio/rolls.mp3";
-import sura from "./contexts/audio/sura1.mp3";
+import sura from "./contexts/audio/sura1.m4a";
 
 function App() {
   const [width, setWidth] = useState(3);
