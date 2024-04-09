@@ -30,8 +30,8 @@ const playRick = useContext(AudioContext)
             <img src={logoWhite} alt="" onClick={playRick}/>
             <img src={iedcLogoWhite} onClick={playRick}/>
             <h3 
-              onClick={()=>playRick(1)}
-              >Contact Josh</h3>
+              onClick={()=>playRick(0)}
+              >Contact Me</h3>
             <p>hhh@gmail.com</p>
             <p>uhuh@gmail.com</p>
         </div>
