@@ -70,7 +70,7 @@ function App() {
   suraa.preload="auto";
  
 //self explanatory
-let bool=true;
+let bool=false;
   const playRick = (sura) => { 
     if (bool&& sura !==1) {
       rick.play();
