@@ -4242,7 +4242,7 @@ background-color: #ffffff;
     align-items: center;
     
 .card{
-    width:50%;
+    width:60%;
     height: 80%;
     padding: 10px;
     display: flex;
@@ -4264,6 +4264,7 @@ background-color: #ffffff;
         justify-content: center;
         align-items: flex-start;
         gap: 10px;
+        max-width: 60%;
 
         h2{
             font-size: 1.5rem;
@@ -4294,6 +4295,7 @@ background-color: #ffffff;
             height: 40%;
         }
         .elm2{
+            max-width: max-content;
             width: 100%;
             height: 60%;
             align-items: center;
