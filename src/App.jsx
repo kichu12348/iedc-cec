@@ -11,6 +11,7 @@ import Testimonials from "./components/testimonials";
 import Footer from "./components/footer";
 import AudioContext from "./contexts/audioContext";
 import rolls from "./contexts/audio/rolls.mp3";
+import sura from "./contexts/audio/sura1.m4a";
 
 function App() {
   const [width, setWidth] = useState(3);
@@ -64,11 +65,14 @@ function App() {
 
    const rick = new Audio(rolls);
    rick.preload = "auto";
+  
+  const suraa = new Audio(sura);
+  suraa.preload="auto";
  
 //self explanatory
-  const playRick = () => { 
-    let bool = true;
-    if (bool) {
+let bool=false;
+  const playRick = (sura) => { 
+    if (bool&& sura !==1) {
       rick.play();
       bool = false;
       setTimeout(() => {
@@ -76,6 +80,15 @@ function App() {
         rick.currentTime = 0;
         bool = true;
       }, 10000);
+    }
+    if (bool&& sura===1) {
+      suraa.play();
+      bool = false;
+      setTimeout(() => {
+        suraa.pause();
+        suraa.currentTime = 0;
+        bool = true;
+      }, 3000);
     }
   };
 
