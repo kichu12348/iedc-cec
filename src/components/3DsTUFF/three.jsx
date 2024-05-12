@@ -27,6 +27,8 @@ const ThreeDScene = ({ width }) => {
       1000
     );
     camera.position.z = 5;
+
+    
   
       
     // Create a sphere with a mesh-like appearance
@@ -37,7 +39,6 @@ const ThreeDScene = ({ width }) => {
     });
     const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
     scene.add(sphere);
-    
 
     // Add lighting
     const ambientLight = new THREE.AmbientLight(0x404040);
