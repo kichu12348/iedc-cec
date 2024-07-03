@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import iedcLogo from "./images/iedcLogo.svg";
-import logo from "./images/logo.webp";
+import logo from "./images/cclogo.png";
 import hamburger from "./images/hamburger.svg";
 import AudioContext from "../contexts/audioContext";
 import { useState,useContext} from "react";
@@ -104,8 +104,6 @@ const HeaderContainer = styled.nav`
   justify-content: center;
   align-items: center;
   height: 50px;
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
   z-index: 1000;
 
