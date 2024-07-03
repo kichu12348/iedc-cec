@@ -28,7 +28,7 @@ function Header({ scrollToHome, scrollToAnoucements, scrollToTestimonials }) {
     return (
       <HamburgerMenuContainer
         showhamburger={showHamburger.toString()}
-        className={animate}
+        className={animate +" "+"hamburgerMenus"}
       >
         <div className="linksH">
           <a className="linkH" onClick={scrollToHome}>
