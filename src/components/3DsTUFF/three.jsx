@@ -1,36 +1,33 @@
-import React, { useEffect, useRef} from "react";
+import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import styled from "styled-components";
 
 const ThreeDScene = ({ width }) => {
   const mountRef = useRef(null);
-
+  const renderer = useRef(new THREE.WebGLRenderer({ antialias: true })).current;
+  const camera = useRef(
+    new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000
+    )
+  ).current;
   useEffect(() => {
     let mouseX = 0;
     let mouseY = 0;
-
-    // Set up the renderer
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setClearColor(0xffffff); // background color white
     renderer.setPixelRatio(window.devicePixelRatio); //for better quality
 
     // Set up the scene
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color("#ffffff"); 
+    scene.background = new THREE.Color("#ffffff");
 
     // Set up the camera
-    const camera = new THREE.PerspectiveCamera(
-      75,
-      window.innerWidth / window.innerHeight,
-      0.1,
-      1000
-    );
+
     camera.position.z = 5;
 
-    
-  
-      
     // Create a sphere with a mesh-like appearance
     const sphereGeometry = new THREE.SphereGeometry(width, 15, 15); // radius, widthSegments, heightSegments
     const sphereMaterial = new THREE.MeshLambertMaterial({
@@ -79,7 +76,28 @@ const ThreeDScene = ({ width }) => {
     };
   }, [width]);
 
-  return <RenderComponentSphere ref={mountRef} className="animate__animated animate__fadeInRight" />;
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      renderer.setSize(width, height);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  return (
+    <RenderComponentSphere
+      ref={mountRef}
+      className="animate__animated animate__fadeInRight"
+    />
+  );
 };
 
 export default ThreeDScene;
@@ -92,7 +110,6 @@ const RenderComponentSphere = styled.div`
   height: 100vh;
   width: 100%;
   overflow: hidden;
-
 
   @media screen and (max-width: 768px) {
     left: 0;
